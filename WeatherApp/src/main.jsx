@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './components/App.jsx'
-import Checktailwind from '../checktailwind.jsx'
+import Checktailwind from './checktailwind.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Checktailwind />
+    <App />
   </StrictMode>
 )
