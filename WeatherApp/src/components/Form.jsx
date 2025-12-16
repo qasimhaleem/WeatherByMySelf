@@ -3,35 +3,33 @@ import { useFormik } from 'formik'
 import Body from './Body'
 
 const Form = () => {
-    const [weather, setWeather] = useState();
+    const [search, setSearch] = useState();
     const formik = useFormik({
         initialValues: {
-            CityName: " ",
+            search: ""
         },
         onSubmit: (values) => {
-            setWeather(values.CityName);
+            setSearch(values.search);
         }
     })
-
     return (
         <div>
             <form action="" onSubmit={formik.handleSubmit}>
-                <div className="min-h-screen w-full flex flex-col items-center pt-20 gap-10 bg-slate-100">
+                <div className="">
                     <input
                         type="text"
-                        name='CityName'
-                        id='CityName'
-                        value={formik.values.CityName}
+                        name='search'
+                        id='search'
+                        value={formik.values.search}
                         onChange={formik.handleChange}
                     />
                 </div>
                 <div>
                     <button type='submit'>Search</button>
-                    <Body searchName={weather} />
                 </div>
+                {search && <Body searchCity={search} />}
             </form>
         </div>
     )
 }
-
 export default Form

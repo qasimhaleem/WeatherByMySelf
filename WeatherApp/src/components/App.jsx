@@ -1,13 +1,10 @@
 import React from 'react'
 import Form from './Form'
-import Body from './Body'
 
 const App = () => {
     return (
-        <div className="bg-slate-950 h-screen w-screen">
-
-            <Form />,
-
+        <div className="bg-slate-50 h-screen w-screen">
+            <Form />
         </div>
 
     )
