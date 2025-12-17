@@ -12,24 +12,25 @@ const Form = () => {
             setSearch(values.search);
         }
     })
-    return (
-        <div>
-            <form action="" onSubmit={formik.handleSubmit}>
-                <div className="">
-                    <input
-                        type="text"
-                        name='search'
-                        id='search'
-                        value={formik.values.search}
-                        onChange={formik.handleChange}
-                    />
-                </div>
-                <div>
-                    <button type='submit'>Search</button>
-                </div>
-                {search && <Body searchCity={search} />}
-            </form>
-        </div>
-    )
 }
+return (
+    <div>
+        <form action="" onSubmit={formik.handleSubmit}>
+            <div className="">
+                <input
+                    type="text"
+                    name='search'
+                    id='search'
+                    value={formik.values.search}
+                    onChange={formik.handleChange}
+                />
+            </div>
+            <div>
+                <button type='submit'>Search</button>
+            </div>
+            {search && <Body searchCity={search} />}
+        </form>
+    </div>
+
+)
 export default Form
