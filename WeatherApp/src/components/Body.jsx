@@ -20,21 +20,22 @@ const Body = (props) => {
         )
 
     }
+
+    return (
+        <div className="grid justify-around place-items-center border border-white">
+            <div className='card'>
+                <h6>Temp-C: {weather.data.current_condition[0].temp_C}</h6>
+            </div>
+            <div className='card'>
+                <h6>Wind   {weather.data.current_condition[0].windspeedMiles}</h6>
+            </div>
+            <div className='card'>
+                <h6>Humadity {weather.data.current_condition[0].humidity}</h6>
+            </div>
+            <div className='card'>
+                <h6>Air Quality {weather.data.current_condition[0].visibility}</h6>
+            </div>
+        </div>
+    )
 }
-return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl border border-gray-200">
-        <div className='card'>
-            <h6>Temp-C: {weather.data.current_condition[0].temp_C}</h6>
-        </div>
-        <div className='card'>
-            <h6>Wind   {weather.data.current_condition[0].windspeedMiles}</h6>
-        </div>
-        <div className='card'>
-            <h6>Humadity {weather.data.current_condition[0].humidity}</h6>
-        </div>
-        <div className='card'>
-            <h6>Air Quality {weather.data.current_condition[0].visibility}</h6>
-        </div>
-    </div>
-)
 export default Body

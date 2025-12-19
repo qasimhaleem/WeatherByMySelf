@@ -3,7 +3,7 @@ import Form from './Form'
 
 const App = () => {
     return (
-        <div className="bg-slate-50 h-screen w-screen">
+        <div className="bg-slate-950 h-screen w-screen">
             <Form />
         </div>
 
