@@ -1,8 +1,14 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <div>
+            <footer>
+                <Link to='github_url'>GitHub</Link>
+                <Link to='linkedin_url'>LinkedIn</Link>
+                <Link to='fb_url'>facebook</Link>
+            </footer>
+        </div>
     )
 }
 
