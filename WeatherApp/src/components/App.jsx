@@ -6,7 +6,6 @@ const App = () => {
         <div className="bg-slate-950 h-screen w-screen">
             <Form />
             <Footer />
-
         </div>
 
     )
